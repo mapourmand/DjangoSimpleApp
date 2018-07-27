@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Info List</h1>
+  {% if info_list %}
+  <ul>
+    {% for info in info_list %}
+      <li>
+       Name:&nbsp {{ info.lst_name }},&nbsp Email: &nbsp{{info.lst_email}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no info submited yet.</p>
+  {% endif %}       
+{% endblock %}
